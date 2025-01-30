@@ -11,6 +11,8 @@ print(f"The area of the circle is: {area:.2f}")
 
 print(f"Ang area ng circle natoh ay: {area:.2f}")
 
+input("Ang pogi ay si (Jezreel Lang): ")
+print("Tama! Ang pogi lang ay si Jezreel!")
 
 
 
