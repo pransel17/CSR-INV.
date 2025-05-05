@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
     padding: 0;
@@ -27,4 +28,35 @@ ul, ol, li, a {
     font-size: 15px;
     font-weight: 500;
     line-height: 0.5px;
+=======
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+ul, ol, li, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.mainContainer {
+    align-content: left;
+    height: 100vh;
+    width: auto;
+    background-color: lightcoral;
+}
+
+.sidebarContainer {
+    min-height: 400px;
+    max-width: 400px;
+    padding: 10px;  
+}
+.sidebar {
+    min-height: 400px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 0.5px;
+>>>>>>> c0c8ad2 (first commit)
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /* Global Styles */
@@ -674,4 +675,682 @@ input::placeholder {
     .header-tabs {
         display: none;
     }
+=======
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;  /* Ensures it takes up full viewport width */
+    height: 100vh;
+}
+
+.dashboard-container {
+    width: 100vw;  /* Full width */
+    height: 100vh;
+    display: flex;
+}
+
+
+/* Screen Styles (shared) */
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
+/* Splash/Welcome Screen (First Image) */
+#splash-screen {
+   /* background: radial-gradient(circle at 50% 30%, #243e76 0%, #0e2952 100%); */
+    background-image: url(/pics/Welcome\ page\ bg.jpg);
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+
+/* School logo and labtract fade in css*/
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* Initially hide school logo & text */
+.school-logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Apply fade-in effect */
+.school-visible {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Fade out everything */
+.splash-hidden {
+    animation: fadeOut 1s ease forwards;
+}
+
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.splash-content h1 {
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.logo-container {
+    margin: 1rem 0 4rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lt-logo {
+    width: 22rem;
+    top: 10vh;
+    height: 22rem;
+    margin-right: -100px;
+    position: relative;
+    z-index: -1; /* Moves behind school logo */
+}
+
+/* src = c:\xampp\htdocs\pics\LABTRACK LOGO.png */
+.lt-logo img {
+    width: 100%;
+    padding-left: -20px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 2px;
+}
+
+.labtrack-text {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.8rem;
+    color: #FFD700;
+    text-align: left;
+}
+
+
+.lt-logo {
+    width: 22rem;
+    height: auto; /* Adjust height dynamically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* Moves behind school logo */
+
+}
+
+.lt-logo img {
+    max-width: 1100px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensures it fills the space without distortion */
+
+}
+
+.school-logo {
+    position: relative; /* Keeps original position */
+    z-index: 1; /* Ensures it's on top of the LabTrack logo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.school-name {
+    margin-top: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.school-keme {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    color: #FFD700;
+}
+
+/* Login Screen */
+#login-screen {
+    z-index: 2;
+    opacity: 0;
+    background-image: url(/pics/Login-bg\ ver\ 2.png);
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+#wrong-credentials {
+    text-align: left;
+    color: rgb(216, 58, 58);
+    opacity: 0;
+    font-size: 12px;
+    padding-top: -3px;
+    line-height: -2px;
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 10px;
+    border-color: #0000009d;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.LoginBoxLabtrackLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.LoginBoxLabtrackLogo img {
+    width: 100%; /* Adjust to fit the container */
+    max-width: 200px; /* Increase if needed */
+    height: auto;
+    display: block; /* Ensures it appears properly */
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+    font-family: 'Poppins', sans-serif; 
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 0.8rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 0.3rem;
+}
+
+.forgot-password {
+    color: #0e2952;
+    text-decoration: none;
+}
+.forgot-password:hover, #logInstead:hover, #cdm-web:hover {
+    font-weight: 550;
+    letter-spacing: -0.2px;
+}
+.forgot-password:visited, .forgot-password:link {
+    color: #0e2952;;
+}
+
+.login-button,
+.reset-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0e2952;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Forgot Password Screen */
+#forgot-password-screen {
+    z-index: 1;
+    opacity: 0;
+}
+
+/* DASHBOARD CSS */
+.dashboard-body {
+    background-color: #f5f7fb;
+    min-height: 100vh;
+    max-width: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    width: auto;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.dashboard-sidebar {
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-logo {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.sidebar-logo span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #08244D;
+}
+
+.sidebar-subtitle {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.sidebar-menu {
+    flex: 1;
+    padding: 15px 0;
+    overflow-y: auto;
+}
+
+.sidebar-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #333;
+    position: relative;
+    margin-bottom: 5px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu-item svg {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    color: #888;
+}
+
+.sidebar-menu-item.active {
+    background-color: #f0f7ff;
+    color: #0066ff;
+    font-weight: 700;
+}
+
+.sidebar-menu-item.active svg {
+    color: #0066ff;
+}
+
+.sidebar-menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-badge {
+    position: absolute;
+    right: 20px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.sidebar-user {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    background-color: #0066ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Main Dashboard Styles */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.dashboard-header {
+    padding: 15px 25px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    margin: 0px 0px 10px;
+}
+
+#header-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 300px;
+}
+
+.header-tabs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.tab {
+    padding: 8px 15px;
+    cursor: pointer;
+
+    border-radius: 5px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.tab.active {
+    background-color: #f0f7ff;
+    color: #0066ff;
+    font-weight: 500;
+}
+
+.tab:hover:not(.active) {
+    background-color: #f5f5f5;
+}
+
+.more-tab {
+    font-weight: bold;
+}
+
+.header-date-selector {
+    display: flex;
+    gap: 15px;
+    align-items: right;
+    margin-right: 0;
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-field label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.date-input {
+    display: flex;
+    align-items: center;
+    background-color: #f5f7fb;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.date-input input {
+    border: none;
+    background-color: transparent;
+    padding: 8px 5px;
+    font-size: 13px;
+    outline: none;
+}
+
+.date-input svg {
+    width: 16px;
+    height: 16px;
+    color: #888;
+}
+
+/* Dashboard Metrics Styles */
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 25px 30px;
+}
+
+.metric-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.metric-title {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.metric-change {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.metric-change.positive {
+    color: #1abc9c;
+}
+
+.metric-change.negative {
+    color: #e74c3c;
+}
+
+/* Dashboard Content Area */
+.dashboard-content {
+    padding: 20px 30px;
+    flex: 1;
+}
+
+#home-page {
+    opacity: 1;
+}
+
+/* Inventory Page */
+#inv-page {
+    opacity: 0;
+    z-index: 3;
+}
+.inv-container {
+    background-color: white;
+    border-radius: 15px;
+    height: 100px;
+    margin: 3px;
+    /* width: auto; */
+    
+}
+
+
+/* Responsive Design for Dashboard */
+@media (max-width: 1200px) {
+    .dashboard-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .dashboard-sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidebar-menu {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+    }
+    
+    .sidebar-menu-item {
+        padding: 8px 12px;
+    }
+    
+    .sidebar-header, .sidebar-user {
+        display: none;
+    }
+    
+    .dashboard-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-tabs {
+        display: none;
+    }
+>>>>>>> c0c8ad2 (first commit)
 }
